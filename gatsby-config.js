@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: "/",
     siteMetadata: {
         title: "MA",
         subtitle: "A text-focused theme",
