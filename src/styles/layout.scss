@@ -1,0 +1,123 @@
+@import "./global";
+
+
+/********************************************
+Default
+********************************************/
+
+#sidebar {
+    display: none;
+}
+
+.sidebar-wrapper {
+    margin-top: $fh-height;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $gap-around;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#main-container>*{
+    padding: $gap-around;
+}
+
+#topbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $fh-height;
+    background-color: $topbar-bg;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    height: 100%;
+}
+
+#rightbar {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#footer {
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $fh-height;
+    border-top: 1px solid $contour;
+}
+
+
+
+
+
+/********************************************
+Medium Size
+********************************************/
+
+@media(min-width: 768px) {
+    #container {
+        display: grid;
+        grid-template-columns: minmax(260px, 1fr) 4fr;
+    }
+
+    #sidebar {
+        display: block;
+        grid-column: 1;
+        position: sticky;
+        box-sizing: border-box;
+        top: 0;
+        height: 100vh;
+        background: $sidebar-bg;
+    }
+
+    #main-container {
+        grid-column: 2 / 3;
+    }
+
+    #rightbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+/********************************************
+Large Size
+********************************************/
+
+@media(min-width: 992px) {
+    #main-wrapper {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: 2fr minmax(240px, 1fr);
+        gap: $gap-around;
+    }
+
+    #content {
+        order: -1;
+    }
+
+    #rightbar {
+        padding-left: 1.5rem;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}

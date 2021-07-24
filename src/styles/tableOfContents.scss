@@ -1,0 +1,29 @@
+@import "./global";
+
+.toc-wrapper {
+    position: sticky;
+    top: 1.5rem;
+}
+
+.toc-wrapper ul {
+    margin-left: 15px;
+    font-size: .9rem;
+}
+
+.toc-wrapper>ul {
+    margin: 0;
+}
+
+.toc-wrapper a {
+    color: $item-color;
+}
+
+.toc-wrapper a:hover {
+    color: $item-hover-color;
+}
+
+
+.toc-header {
+    margin: 1rem 0;
+    font-weight: 700;
+}

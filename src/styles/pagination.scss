@@ -1,0 +1,33 @@
+@import "./global";
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.pagination-item:not(:last-child){
+    margin-right: 0.7rem;
+}
+
+.pagination-link {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center; 
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(39, 40, 43);
+    border: 1px solid var(--contour);
+}
+
+.pagination-link.active {
+    font-weight: 700;
+    background-color: rgba(28, 52, 94, 1);
+}
+
+.pagination-link.disabled {
+    pointer-events: none;
+    color: $text-color;
+}

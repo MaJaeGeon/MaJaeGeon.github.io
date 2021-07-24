@@ -1,0 +1,30 @@
+---
+title: "Categories"
+---
+
+import { graphql, Link } from "gatsby"
+import ContentHeader from "../components/contentHeader";
+
+
+
+<ContentHeader header={props.pageContext.frontmatter.title}/>
+
+<div className="button-box">
+{props.data.allMdx.group.map(category => (
+        <Link to={`/categories/${category.fieldValue}/`} className="button" key={category.fieldValue}>
+            {category.fieldValue} <span>{category.totalCount}</span>
+        </Link>
+))}
+</div>
+
+
+export const pageQuery = graphql`
+query {
+    allMdx(limit: 2000) {
+        group(field: frontmatter___categories) {
+            fieldValue
+            totalCount
+        }
+    }
+}
+`;

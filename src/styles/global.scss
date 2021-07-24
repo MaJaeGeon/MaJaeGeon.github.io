@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/********************************************
+Varialble
+********************************************/
+
+$fh-height: 3rem;
+$gap-around: 0 1.5rem;
+
+/* Color */
+$body-bg: rgb(27, 27, 30);
+$topbar-bg: rgb(39, 40, 43);
+$sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
+$contour: #2C2D2D;
+$text-color: #afb0b1;
+$link-color: #8AB4F8;
+$link-hover-color: #526C96;
+$item-color: #7D7D7D;
+$item-hover-color: #f8f9facf;
+$item-active-color: #fff;
+
+
+
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none; 
+    color: $link-color;
+}
+
+a:hover {
+    color: $link-hover-color;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+
+body {
+    background: $body-bg;
+    color: $text-color;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+code {
+    color: #de6b18;
+    background-color: #272822;
+    padding: .2rem .4rem;
+    margin: 0 .2rem;
+    border-radius: 5px;
+}
+
+
+.anchor {
+    fill: $text-color;
+}
+
+.widget {
+    padding: 1rem 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.widget-header {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: $item-color;
+}
+
+.widget .list-item {
+    color: $item-color;
+}
+
+.widget .list-item:hover {
+    color: $item-hover-color;
+}
+
+.button-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-box>.button {
+    margin-right: .8rem;
+}
+
+.button {
+    border-radius: 0.7em;
+    padding: 6px 8px 7px;
+    border: 1px solid $contour;
+}
+
+.button span {
+    margin-left: 0.6em;
+    font-size: 0.7em;
+}
+
+
+@media(min-width: 992px) {
+    .widget {
+        border-left: 1px solid $contour;
+    }
+}

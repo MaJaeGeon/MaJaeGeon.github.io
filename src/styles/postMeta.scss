@@ -1,0 +1,18 @@
+@import "./global";
+
+.post-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin: .5rem 0;
+    color: $text-color;
+    font-size: .8rem;
+}
+
+.post-meta-group {
+    display: flex;
+}
+
+.post-meta-group-item {
+    margin-right: 1rem;
+}

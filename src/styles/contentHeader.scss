@@ -1,0 +1,20 @@
+@import "./global";
+
+.content-header {
+    color: $item-color;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $contour;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.content-header .link {
+    color: #7D7D7D;
+    font-size: .9rem;
+}
+
+.content-header .link:hover {
+    color: $item-hover-color;
+}

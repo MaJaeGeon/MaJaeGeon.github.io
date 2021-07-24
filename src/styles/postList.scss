@@ -1,0 +1,43 @@
+@import "./global";
+
+.post-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-thumbnail {
+    height: 8rem;
+    margin-left: 40px;
+}
+
+.post-content {
+    width: 100%;
+}
+
+.post-info {
+    margin-bottom: 3rem;
+}
+
+.post-title {
+    color: $link-color;   
+    margin: .5rem 0;
+}
+
+.post-excerpt {
+    color: $text-color;
+}
+
+.post-item:hover .post-title {
+    color: $link-hover-color;
+    text-decoration: underline $link-hover-color; 
+}
+
+
+@media(max-width: 767px) {
+    .post-thumbnail {
+        display: none;
+    }
+}

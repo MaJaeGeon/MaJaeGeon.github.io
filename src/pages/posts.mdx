@@ -1,0 +1,41 @@
+---
+title: "Posts"
+---
+
+
+import PostList from "../components/postList";
+import ContentHeader from "../components/contentHeader";
+
+import { graphql } from "gatsby";
+
+<PostList posts={props.data.allMdx.edges} contentHeader={
+    <ContentHeader header={
+        <div>전체 글 <span style={{ color: '#ef402f'}}>{props.data.allMdx.totalCount}</span></div>
+    }/>
+}/>
+
+
+
+
+export const pageQuery = graphql`
+    query {
+        allMdx(sort: {fields: frontmatter___date, order: DESC}, limit: 2000) {
+            totalCount
+            edges {
+                node {
+                    frontmatter {
+                        categories
+                        date
+                        notice
+                        pinned
+                        title
+                        thumbnail
+                    }
+                    excerpt(truncate: true)
+                    id
+                    slug
+                }
+            }
+        }
+    }
+`;
