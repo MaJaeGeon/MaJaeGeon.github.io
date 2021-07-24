@@ -6,8 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../styles/pagination.scss";
 
 export default function Pagination ({currentPage, numPages, slug}) {
-    console.log(currentPage);
-    console.log(numPages);
     const prevPage = `${slug}/${currentPage <= 2 ? "" : currentPage - 1}`;
     const nextPage = `${slug}/${(currentPage === numPages) ? (currentPage === 1? "" : currentPage) : currentPage + 1}`;
 
