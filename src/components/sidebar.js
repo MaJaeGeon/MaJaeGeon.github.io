@@ -13,6 +13,7 @@ export default function Sidebar () {
                     social {
                         name
                         avatar
+                        homepage
                     }
                 }
             }
@@ -20,17 +21,17 @@ export default function Sidebar () {
     `);
 
     const { title, subtitle } = data.site.siteMetadata;
-    const { name, avatar } = data.site.siteMetadata.social;
+    const { name, avatar, homepage } = data.site.siteMetadata.social;
 
 
     return (
         <div className="sidebar-wrapper">
             <div className="profile sidebar-item">
-                <Link to="/" className="avatar">
+                <a href={homepage} className="avatar">
                     <div className="name">{name}</div>
                     <img src={avatar} alt="profile avatar" />
-                </Link>
-                <a href="/" className="title">{title}</a>
+                </a>
+                <Link to="/" className="title">{title}</Link>
                 <div className="subtitle">{subtitle}</div>
             </div>
 

@@ -4,10 +4,10 @@ import Layout from "../layout";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import TableOfContents from "../components/tableOfContents";
 import ContentHeader from "../components/contentHeader";
 import PostMeta from "../components/postMeta";
 import SEO from "../components/seo";
+import TableOfContents from "../widgets/tableOfContents";
 
 export default function PostTemplate({ data }) {
     const postContent = data.mdx.body;

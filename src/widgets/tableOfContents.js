@@ -26,8 +26,8 @@ function createList(headings) {
 export default function TableOfContents ({headings}) {
 
     return (
-        <nav className="toc-wrapper">
-            <div className="toc-header">TABLE OF CONTENTS</div>
+        <nav className="widget toc-wrapper">
+            <div className="widget-header">TABLE OF CONTENTS</div>
             {createList(headings)}
         </nav>
     );

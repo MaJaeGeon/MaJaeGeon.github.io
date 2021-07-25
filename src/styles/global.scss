@@ -65,6 +65,7 @@ code {
     fill: $text-color;
 }
 
+
 .widget {
     padding: 1rem 1.5rem;
     margin-bottom: 3rem;
@@ -73,7 +74,6 @@ code {
 .widget-header {
     margin-bottom: 1rem;
     font-weight: 700;
-    color: $item-color;
 }
 
 .widget .list-item {
@@ -83,6 +83,7 @@ code {
 .widget .list-item:hover {
     color: $item-hover-color;
 }
+
 
 .button-box {
     display: flex;
