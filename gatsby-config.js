@@ -4,7 +4,9 @@ module.exports = {
         title: "MA",
         subtitle: "A text-focused theme",
         description: "A minimal, portfolio, sidebar theme with responsive web design and focuses on text presentation.",
+        image: "https://avatars.githubusercontent.com/u/59637845?v=4",
         favicon: "https://avatars.githubusercontent.com/u/59637845?v=4",
+        siteUrl: "http://localhost:8000",
         social: { 
             name: "MaJaeGeon",
             email: "akworjs0517@gmail.com",
@@ -18,6 +20,7 @@ module.exports = {
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sharp",
         "gatsby-remark-images",
+        "gatsby-plugin-sitemap",
         {
             resolve: "gatsby-source-filesystem",
             options: {

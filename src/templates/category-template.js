@@ -6,13 +6,16 @@ import ContentHeader from "../components/contentHeader";
 import NoticePosts from "../widgets/noticePosts";
 import RecentPosts from "../widgets/recentPosts";
 import Pagination from "../components/pagination";
+import SEO from "../components/seo";
 
 export default function Category({ pageContext, data }) {
     const { category, currentPage, numPages, slug } = pageContext;
     const { edges, totalCount } = data.allMdx;
 
     return (
-        <Layout pageTitle="Home">
+        <Layout pageTitle={category}>
+            <SEO title={category} description={`This is a list of posts in the ${category} category.`}/>
+            
             <main id="main-wrapper">
                 <div id="rightbar">
                     <NoticePosts limit={5} />

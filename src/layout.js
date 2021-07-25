@@ -3,7 +3,6 @@ import Sidebar from "./components/sidebar";
 import "./styles/layout.scss";
 import { graphql, useStaticQuery } from "gatsby";
 import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
-import { Helmet } from "react-helmet";
 
 deckDeckGoHighlightElement();
 
@@ -25,10 +24,6 @@ export default function Layout ({ pageTitle, children }) {
 
     return (
         <div id="container">
-            <Helmet>
-                <title>{pageTitle ? `${pageTitle} | ${site.title}` : site.title}</title>
-            </Helmet>
-
             <aside id="sidebar">
                 <Sidebar />
             </aside>
