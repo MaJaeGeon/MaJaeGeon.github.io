@@ -1,0 +1,4 @@
+User-agent: *
+
+ALLOW: /
+sitemap: /sitemap/sitemap-index.xml
